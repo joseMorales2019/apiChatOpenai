@@ -42,3 +42,7 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`✅ Servidor iniciado en http://localhost:${PORT}`);
 });
+
+app.get('/api/chat', (req, res) => {
+  res.send({ message: 'La API está funcionando correctamente con GET.' });
+});
